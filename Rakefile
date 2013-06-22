@@ -1,5 +1,5 @@
 Dir['./lib/tasks/**/*.rake'].each { |f| load f }
-task :default => :help
+task :default => :spec
 
 desc "Opens a console session [Development]"
 task :irb do
