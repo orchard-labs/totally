@@ -8,6 +8,7 @@ env:
       g7R5EKqOMaxmyCRlwSUH6335IrW6qBD/OpZGmoD7Kc41X/uJQ5lxiFR4SgNR
       2vsHbMZPB6CXM3JR/hQOU5CDietK6XwqKNH295dBX255tGAISpSA9fsmuERv
       A8Da/dAcAJHcloFf4r8BIxlLlUevV+AudAwn/kHtBTc6zCnmpGM=
+script: bundle exec rake spec
 after_success:
           - wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
           - heroku plugins:install https://github.com/ddollar/heroku-anvil
