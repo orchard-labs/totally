@@ -8,6 +8,7 @@ gem 'sass'
 gem 'sinatra-assetpack'
 
 group :test do
+  gem 'rake'
   gem 'rspec'
   gem 'capybara'
 end
