@@ -1,0 +1,4 @@
+--format=documentation
+--fail-fast
+--backtrace
+--color
