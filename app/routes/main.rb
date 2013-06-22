@@ -1,7 +1,7 @@
 module TotallyOrchard
   class Main
     get '/' do
-      'hello world'
+      erb :main
     end
   end
 end
