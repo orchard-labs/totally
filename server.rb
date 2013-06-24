@@ -5,6 +5,7 @@ Bundler.require :default, ENV['RACK_ENV'].to_sym
 
 require 'sinatra/base'
 require 'sinatra/assetpack'
+require 'mongoid'
 
 $:.unshift *Dir["./lib"]
 
@@ -49,6 +50,8 @@ module TotallyOrchard
   (Dir['./config/*.rb'].sort +
     Dir['./app/init/*.rb'].sort +
     Dir['./app/**/*.rb'].sort).uniq.each { |rb| require rb }
+
+  Mongoid.load!("#{Main.root}/config/mongoid.yml")
 
   Main.set :port, ENV['PORT'].to_i if ENV['PORT']
   Main.run! if Main.run?
