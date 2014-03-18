@@ -14,3 +14,5 @@ after_success:
   - wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
   - heroku plugins:install https://github.com/ddollar/heroku-anvil
   - heroku build -r totally-orchard -b https://github.com/heroku/heroku-buildpack-ruby.git
+notifications:
+  slack: totallyorchard:lJ1zFYBXIuI27irHOAF43vnA
